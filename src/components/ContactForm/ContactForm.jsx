@@ -18,6 +18,7 @@ class ContactForm extends Component {
     if (this.props.contacts.find(contact => contact.name === this.state.name)) {
       return alert(this.state.name + ' is already in contacts');
     }
+    //При сабміті форми передвє дані в formSubmitHandler, яка в пропсах
     this.props.onSubmit(this.state);
     this.reset();
   };
